@@ -25,7 +25,7 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Local CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -86,6 +86,18 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="container">
+         <div class="row height d-flex justify-content-center   align-items-center">
+            <div class="col-md-6">
+                <div class="form d-flex">
+                  <i class="fa fa-search text-white mt-2 me-2"></i>
+                  <input type="text" class="form-control form-input" placeholder="Search anything...">
+                </div>
+            </div>    
+        </div>
+        </div>
+
                 <?php  if (isset($_SESSION['username'])) : ?>
     	<p class="user me-5">Welcome  <strong><?php echo $_SESSION['username']; ?></strong></p>
     	<p> <a href="index.php?logout='1'" style="color: grey;">Logout</a> </p>
