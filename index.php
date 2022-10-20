@@ -1,4 +1,5 @@
 <?php 
+    require_once 'components/app.functions.php';
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
@@ -29,6 +30,8 @@
 </head>
 
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- This is Bootsratp Nav bar -->
     <nav id="navbar">
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -98,6 +101,8 @@
         </div>
         </div>
 
+        
+
                 <?php  if (isset($_SESSION['username'])) : ?>
     	<p class="user me-5">Welcome  <strong><?php echo $_SESSION['username']; ?></strong></p>
     	<p> <a href="index.php?logout='1'" style="color: grey;">Logout</a> </p>
@@ -110,6 +115,7 @@
         <h3>Top News <span class="badge text-bg-secondary">by Komanda 3</span></h3>
         <span class="line"></span>
     </div>
+    <?php include './components/comments/index.view.php'; ?>
     <!-- This is div where all the News are Fetched from API -->
     <div id="newsBox" class="container"></div>
     <div id="spinner" class="mySpin spinner-border text-warning"></div>
@@ -129,7 +135,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
-
+        
 </body>
 
 </html>
